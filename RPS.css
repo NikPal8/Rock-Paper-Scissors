@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(168, 129, 81);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.theGame {
+    background-color: rgb(51, 70, 46);
+    width: 1000px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.gametitle {
+    background-color: rgb(173, 65, 65);
+    width: 800px;
+    height: 100px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.playerName {
+    background-color: rgb(38, 109, 68);
+    width: 800px;
+    height: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+    .player1Name {
+        background-color: rgb(143, 219, 99);
+        width: 50%;
+        height: 100%;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .player2Name {
+        background-color: rgb(211, 219, 99);
+        width: 50%;
+        height: 100%;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+.liveResults {
+    background-color: rgb(107, 78, 78);
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.p1Results {
+    background-color: gray;
+    width: 50%;
+    height: 100%;
+
+}
+
+.p2Results {
+    background-color:gray;
+    width: 50%;
+    height: 100%;
+
+}
+
+.gameTable {
+    background-color: rgb(110, 110, 110);
+    width: 800px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 100px;
+    
+}
+
+.versusField {
+    background-color: rgb(99, 165, 219);
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    
+}
+
+.player1Section {
+    background-color: rgb(143, 219, 99);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-self: center;
+    
+    width: 40%;
+    height: 90%;
+
+}
+
+.player2Section {
+    background-color: rgb(211, 219, 99);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-self: center;
+    width: 40%;
+    height: 90%;
+}
+
+.scoreKeeper {
+    background-color: rgb(122, 95, 116);
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    
+
+}
+
+#to {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1 {
+    /* background-color: bisque; */
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+.actions {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.gameStats {
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+#spacing {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Style Classes */
+.win {
+    color: greenyellow;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 2px;
+  }
+
+.lose {
+    color: red;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 2px;
+}
+
+
+.draw {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    -webkit-text-stroke-width: 2px;
+}
+
+.reset {
+    color: transparent;
+}
+
+.moves {
+    background-color: blue;
+    width: 200px;
+    height: 400px;
+}
