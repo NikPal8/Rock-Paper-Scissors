@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="RPS.css">
+</head>
+<body>
+
+    <div class="thegame">
+
+            <div class="gametitle">
+
+                <h1 id="gameName">ROCK PAPER SCISSORS v3</h1>
+
+            </div>
+
+            <div class="playerName">
+
+                <div class="player1Name">
+                    Player 1
+                </div>
+
+                <div class="player2Name">
+                    Player 2
+                </div>
+
+            </div>
+            
+            <div class="liveResults">
+
+                <div class="p1Results">
+                    
+                </div>
+
+                <div class="p2Results">
+                    
+                </div>
+
+            </div>
+
+
+            <div class="gameTable">
+
+                <div class="versusField"> 
+
+                        <div class="player1Section">
+
+                        </div>
+
+                        <div class="player2Section">
+                            
+                        </div>
+
+                </div>
+
+                <div class="scoreKeeper">
+                    <h1>
+                        <span id="p1Display">0</span>
+                        <span id="to">to</span> 
+                        <span id="p2Display">0</span>
+
+                        
+                    </h1>
+                    
+                    <div class="actions">
+
+                        <button id="rockButton">ROCK</button>
+                        <button id="paperButton">PAPER</button>
+                        <button id="scissorsButton">SCISSORS</button>
+                        <button id="resetButton">Reset</button>
+                        
+                        <select name="" id="playTo">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+
+                    </div>
+
+                    <div class="gameStats">
+
+                        Number of Draws:<span id="draws">0</span>
+                        <span id="spacing">  </span>
+                        Number of Turns:<span id="turns">0</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+    </div>
+
+    <div class="moves">
+
+    </div>
+
+
+    <script src="RPS.js"></script>
+</body>
+</html>
