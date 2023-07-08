@@ -20,6 +20,8 @@ const p2Results = document.querySelector('.p2Results');
 const draws = document.querySelector('#draws');
 const turns = document.querySelector('#turns');
 
+const logOfMoves = document.querySelector('.logOfMoves');
+
 const player1Section = document.querySelector('.player1Section');
 const player2Section = document.querySelector('.player2Section');
 
@@ -35,12 +37,16 @@ let p1Score = 0; //Displays Player 1 Score
 let p2Score = 0; //Displays Player 2 Score
 let numberDraws = 0; //Displays number of draws
 
+// let loggedMoves = "";
+
 let gameTurn = 0; // Displays Game Turn
 let winningScore = 3; //Plays up to score to win
 let isGameOver = false; // Game over is when winning score is reached
 
 let winResult = ""; 
 let loseResult = "";
+
+let message ="";
 
 //-----------------Variables End----------------//
 
@@ -75,13 +81,14 @@ rockButton.addEventListener('click', function() {
             if (p2 === 3) {
                 p1Score++;
                 player2Section.style.backgroundImage = "url(Scissors.png)";
-
                 
                 p1Results.textContent = "wins";
                 p1Results.classList.add('win');
 
                 p2Results.textContent = "loses";
                 p2Results.classList.add("lose");
+
+                message = "Scissors";
 
 
             } else if (p2 === 2) {
@@ -94,6 +101,8 @@ rockButton.addEventListener('click', function() {
                 p2Results.textContent = "wins";
                 p2Results.classList.add("win");
 
+                message = "Paper";
+
 
             } else {
                 player2Section.style.backgroundImage = "url(Rock.png)";
@@ -105,8 +114,10 @@ rockButton.addEventListener('click', function() {
                 p2Results.textContent = "draw";
                 p2Results.classList.add("draw");
 
+                message = "Rock";
 
             }
+            
 
             if (p1Score === winningScore || p2Score === winningScore) {
 
@@ -136,10 +147,27 @@ rockButton.addEventListener('click', function() {
             draws.textContent = numberDraws;
             turns.textContent = gameTurn;
             
+            for (let i = gameTurn; i <= gameTurn; i++) {
+                let move = document.createElement('span');
+                let moveWinner = document.createElement('span');
+                
+                move.textContent = `Turn No.${i} - Player 1:Rock      ||      Player 2:${message}`;
+                // if (p2)
+                // moveWinner.textContent = ``;
+
+                logOfMoves.appendChild(moveWinner);
+                logOfMoves.appendChild(move);
+
+               
+            }
 
             
 
 });
+
+
+
+
 
 
 
@@ -169,6 +197,8 @@ paperButton.addEventListener('click', function() {
                 p2Results.textContent = "wins";
                 p2Results.classList.add("win");
 
+                message = "Scissors";
+
             
             } else if (p2 === 1) {
                 p1Score++;
@@ -180,6 +210,8 @@ paperButton.addEventListener('click', function() {
                 p2Results.textContent = "loses";
                 p2Results.classList.add("lose");
 
+                message = "Rock";
+
                     
             } else {
                 player2Section.style.backgroundImage = "url(Paper.png)";
@@ -190,6 +222,8 @@ paperButton.addEventListener('click', function() {
 
                 p2Results.textContent = "draw";
                 p2Results.classList.add("draw");
+
+                message = "Paper";
                     
             }
 
@@ -221,6 +255,19 @@ paperButton.addEventListener('click', function() {
             draws.textContent = numberDraws;
             turns.textContent = gameTurn;
 
+            for (let i = gameTurn; i <= gameTurn; i++) {
+                let move = document.createElement('span');
+                let moveWinner = document.createElement('span');
+                
+                move.textContent = `Turn No.${i} - Player 1:Paper      ||      Player 2:${message}`;
+                // if (p2)
+                // moveWinner.textContent = ``;
+
+                logOfMoves.appendChild(moveWinner);
+                logOfMoves.appendChild(move);
+
+                
+            }
     
 
 });
@@ -250,6 +297,8 @@ scissorsButton.addEventListener('click', function() {
 
                 p2Results.textContent = "loses";
                 p2Results.classList.add("lose");
+
+                message = "Paper";
                             
             } else if (p2 === 1) {
                 p2Score++;
@@ -261,6 +310,8 @@ scissorsButton.addEventListener('click', function() {
                 p2Results.textContent = "wins";
                 p2Results.classList.add("win");
 
+                message = "Rock";
+
                             
             } else {
                 player2Section.style.backgroundImage = "url(Scissors.png)";
@@ -271,6 +322,8 @@ scissorsButton.addEventListener('click', function() {
 
                 p2Results.textContent = "draw";
                 p2Results.classList.add("draw");
+
+                message = "Scissors";
                             
             }
 
@@ -300,7 +353,26 @@ scissorsButton.addEventListener('click', function() {
             draws.textContent = numberDraws;
             turns.textContent = gameTurn;
 
-});
+            for (let i = gameTurn; i <= gameTurn; i++) {
+                let move = document.createElement('span');
+                let moveWinner = document.createElement('span');
+                
+                move.textContent = `Turn No.${i} - Player 1:Scissors      ||      Player 2:${message}`;
+                // if (p2)
+                // moveWinner.textContent = ``;
+
+                logOfMoves.appendChild(moveWinner);
+                logOfMoves.appendChild(move);
+
+                
+            }
+
+        });
+        
+        //---I tried to implement for loop---//
+        //--Needs to be inside function (function scope)--//
+        //Problem is it loops after each add event listener//
+
 
 winningScoreSelector.addEventListener('change', function(){
     winningScore = parseInt(this.value); //changes this
@@ -336,6 +408,9 @@ function reset() {
 
     gameTurn = 0; 
     isGameOver = false;
+
+    logOfMoves.textContent ="";
+    logOfMoves.textContent ="";
 };
 
 //----------------Event Listeners End-----------------//

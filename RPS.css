@@ -3,8 +3,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    
 }
+
 
 .theGame {
     background-color: rgb(51, 70, 46);
@@ -21,6 +22,7 @@ body {
     flex-direction: column;
 
 }
+
 
 .gametitle {
     background-color: rgb(173, 65, 65);
@@ -196,7 +198,30 @@ h1 {
 }
 
 .moves {
-    background-color: blue;
-    width: 200px;
-    height: 400px;
+    background-color: rgb(51, 70, 46);
+    width: 30px;
+    height: 10px;
+    display: inline-block;
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    
+}
+
+
+/**** thegame div - END ****/
+.logOfMoves {
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 75%;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
 }
